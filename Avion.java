@@ -53,8 +53,8 @@ public class Avion {
     }
     //Métodos propias del tipo
     //Este método compará los promedios de las velocidades de dos aviones y devolverá un valor logico
-    public boolean esMayorEnVeloc(int unaVelocProm){
-        return this.velocidProm >= velocidProm;
+    public boolean esMayorEnVeloc(double unaVelocProm){
+        return this.velocidProm <= unaVelocProm;
     }
-    
+
 }
