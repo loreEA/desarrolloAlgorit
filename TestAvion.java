@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class TestAvion {
+    /*Este algoritmo, según dos objeto del tipo Avion, creará y mostrára un menú con diferentes
+    opciones para que el usuario juegue con las operaciones declaradas en la clase Avion*/
     public static void main(String[] args) {
         Avion unAvion, unAvion2;
         Scanner entrada = new Scanner(System.in);
