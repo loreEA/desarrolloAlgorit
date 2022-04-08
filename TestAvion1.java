@@ -11,7 +11,8 @@ public class TestAvion1 {
         int longitud;
         longitud = cargarLongitud();
         avion = new Avion[longitud];
-        
+        cargarArreglo(avion);
+
     }
     //Este módulo cargará y devolverá la longitud que tendrá el arreglo del tipo Avion
     public static int cargarLongitud(){
@@ -54,6 +55,28 @@ public class TestAvion1 {
             promedVeloc = entrada.nextDouble();
             avion[i] = new Avion(identif,modelo,cantAsientos,kmRecorrid,promedVeloc);
         }
+    }
+    /*Este método, dado dos objetos del tipo Avion, mostrara cierta información según la operación que 
+    escoga al usuario*/
+    public static void menu(Avion primerAvion, Avion segundAvion) {
+        int opcion;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("-----------------------------------------------------------------------------------------------");
+        System.out.println("                                        MENU");
+        System.out.println("-----------------------------------------------------------------------------------------------");
+        System.out.println("Porfavor ingrese algún valor entero según las siguientes opciones:");
+        System.out.println("1: Mostrar todos los datos del primer avión");
+        System.out.println("2: Mostrar todos los datos del segundo avión");
+        System.out.println("3: Modificar la cantidad de asientos, km recorridos y promedio de velocidad del primer avión");
+        System.out.println("4: Modificar la cantidad de asientos, km recorridos y promedio de velocidad del segundo avión");
+        System.out.println("Cualquier otro valor: Salida del programa");
+        do {
+            System.out.println("                                    OPCIÓN");
+            opcion = scan.nextInt();
+            switch(opcion){
+                case 1: ; break;
+            }
+        } while (opcion>0 && opcion<5);
     }
 
 }
