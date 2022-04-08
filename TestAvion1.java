@@ -56,17 +56,18 @@ public class TestAvion1 {
             avion[i] = new Avion(identif,modelo,cantAsientos,kmRecorrid,promedVeloc);
         }
     }
-    /*Este método, dado dos objetos del tipo Avion, mostrara cierta información según la operación que 
+    /*Este método, dado un array del tipo Avion, mostrará cierta información según la operación que 
     escoga al usuario*/
-    public static void menu(Avion primerAvion, Avion segundAvion) {
+    public static void menu(Avion[] avion) {
         int opcion;
         Scanner scan = new Scanner(System.in);
         System.out.println("-----------------------------------------------------------------------------------------------");
         System.out.println("                                        MENU");
         System.out.println("-----------------------------------------------------------------------------------------------");
         System.out.println("Porfavor ingrese algún valor entero según las siguientes opciones:");
-        System.out.println("1: Mostrar todos los datos del primer avión");
-        System.out.println("2: Mostrar todos los datos del segundo avión");
+        System.out.println("1: Mostrar el avión que tiene mayor velocidad ");
+        System.out.println("2: Mostrar la cantidad de asientos que tiene un cierto avión. ");
+        System.out.print("Aclarac.: Las posiciones van desde 1 hasta "+avion.length);
         System.out.println("3: Modificar la cantidad de asientos, km recorridos y promedio de velocidad del primer avión");
         System.out.println("4: Modificar la cantidad de asientos, km recorridos y promedio de velocidad del segundo avión");
         System.out.println("Cualquier otro valor: Salida del programa");

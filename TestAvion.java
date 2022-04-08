@@ -37,7 +37,7 @@ public class TestAvion {
         avion = new Avion(id,modelo,cantidAsient,kmRecorrid,promedVeloc);
         return avion;
     }
-    /*Este método, dado dos objetos del tipo Avion, mostrara o modificara según la operación que 
+    /*Este método, dado dos objetos del tipo Avion, mostrará o modificara según la operación que 
     escoga al usuario*/
     public static void menu(Avion primerAvion, Avion segundAvion) {
         int opcion;
