@@ -57,7 +57,6 @@ public class TestAvion {
                 case 2: mostrarAvion(segundAvion);break;
                 case 3: modificarAvion(primerAvion);break;
                 case 4: modificarAvion(segundAvion);break;
-                default: opcion = 0;
             }
         } while (opcion>0 && opcion<5);
     }
