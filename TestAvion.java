@@ -37,7 +37,8 @@ public class TestAvion {
         avion = new Avion(id,modelo,cantidAsient,kmRecorrid,promedVeloc);
         return avion;
     }
-
+    /*Este método, según dos objetos del tipo Avion, mostrara, cargara o devolvera alguna de las 
+    operaciones que se le ofrezca al usuario*/
     public static void menu(Avion primerAvion, Avion segundAvion) {
         int opcion;
         Scanner scan = new Scanner(System.in);
@@ -62,7 +63,7 @@ public class TestAvion {
             }
         } while (opcion>0 && opcion<5);
     }
-
+    //Este módulo mostrará la información del avion que quiera ver el usuario
     public static void mostrarAvion(Avion unAvion) {
         System.out.println("El identificador del Avión es: "+unAvion.getIdentificador());
         System.out.println("El modelo del Avión "+unAvion.getIdentificador()+" es: "+unAvion.getModelo());
@@ -70,7 +71,7 @@ public class TestAvion {
         System.out.println("La cantidad de km recorridos del Avión "+unAvion.getIdentificador()+" es: "+unAvion.getKilomRecorrid());
         System.out.println("La velocidad promedio del Avión "+unAvion.getModelo()+" es: "+unAvion.getVelocidadProm());
     }
-
+    //Este módulo modificará la información del avion que el usuario haya escogido
     public static void modificarAvion(Avion unAvion){
         int cantAsients;
         double promedioVeloc, kilomRecorridos;
