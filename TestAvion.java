@@ -4,7 +4,6 @@ public class TestAvion {
     opciones para que el usuario juegue con las operaciones declaradas en la clase Avion*/
     public static void main(String[] args) {
         Avion unAvion, unAvion2;
-        Scanner entrada = new Scanner(System.in);
         System.out.println("-----------------------------------------------------------------------------------------------");
         System.out.println("                                      CARGAR PRIMER AVION");
         System.out.println("-----------------------------------------------------------------------------------------------");
