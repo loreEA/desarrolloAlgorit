@@ -36,7 +36,7 @@ public class TestAvion1 {
     }
     //Este módulo, según un arreglo del tipo Avion, cargará dicho arreglo pero no lo retornará.
     public static void cargarArreglo(Avion[] avion){
-        String identif, modelo, entrap;
+        String identif, modelo;
         int cantAsientos, i, longitud = avion.length;
         double kmRecorrid, promedVeloc;
         Scanner entrada = new Scanner(System.in);
