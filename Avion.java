@@ -26,7 +26,7 @@ public class Avion {
     /*Estos métodos obtendrán un valor del tipo texto, entero o real, dependiendo de lo que contengan 
     cada uno de los atributos*/
     public String getIdentificador(){
-        return this.identificador;
+        return identificador;
     }
     public String getModelo(){
         return modelo;
