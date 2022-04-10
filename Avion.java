@@ -40,6 +40,13 @@ public class Avion {
     public double getVelocidadProm(){
         return velocidProm;
     }
+    public String toString(){
+        return "El avion "+identificador+" tiene un modelo "+modelo+", cantidad de asientos "
+        +cantAsientos+", km recorridos "+kmRecorrid+" y una promedio de velocidad "+velocidProm;
+    }
+    public boolean equals(String unIdentif){
+        return identificador.equalsIgnoreCase(unIdentif);
+    }
     //Métodos modificadores
     //Estos métodos modicarán, según el tipo de valor, a ciertos atributos. Excep. al identif y modelo
     public void setCantAsientos(int cantidAsient){
