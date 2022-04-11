@@ -1,21 +1,21 @@
 public class Pedido {
     //Atributos de la clase
-    private int codigo;
+    private String codigo;
     private String[] producto;
     private double[] costo;
     private String direccion;
     private String nombre;
-    private int telefono;
+    private String telefono;
     //Constructores 
-    public Pedido(int unCodigo){
+    public Pedido(String unCodigo){
         codigo = unCodigo;
         producto = new String[0];
         costo = new double[0];
         direccion = "";
         nombre = "";
-        telefono = 0;
+        telefono = "";
     }
-    public Pedido(int unCodigo,String[] unProducto,double[] unCosto,String unaDirecc,String unNombre,int unTelef){
+    public Pedido(String unCodigo,String[] unProducto,double[] unCosto,String unaDirecc,String unNombre,String unTelef){
         codigo = unCodigo;
         producto = unProducto;
         costo = unCosto;
@@ -26,7 +26,7 @@ public class Pedido {
     //Métodos Observadores
     /*Estos métodos obtendrán un valor o todo un arreglo completo del tipo texto, entero o real, 
     dependiendo de lo que contengan cada uno de los atributos*/
-    public int getCodigo(){
+    public String getCodigo(){
         return codigo;
     }
     public String[] getProducto(){
@@ -41,10 +41,10 @@ public class Pedido {
     public String getNombre(){
         return nombre;
     }
-    public int getTelefono(){
+    public String getTelefono(){
         return telefono;
     }
-    public boolean equals(int unCodigo){
+    public boolean equals(String unCodigo){
         return this.codigo == unCodigo;
     }
     //Metodos Modificadores
@@ -61,7 +61,7 @@ public class Pedido {
     public void setNombre(String unNombre){
         nombre = unNombre;
     }
-    public void setTelefeno(int unTelefono){
+    public void setTelefeno(String unTelefono){
         telefono = unTelefono;
     }
     //Propias del tipo
@@ -72,5 +72,14 @@ public class Pedido {
             costoTotal = costoTotal+costo[i];
         }
         return costoTotal;
+    }
+    //Este método sirve para concatenar todos los productos que haya ingresado el usuario
+    public String concatenarProductos(){
+        int i, longitud =this.producto.length;
+        String producConcat="";
+        for(i=0;i<longitud;i++){
+            producConcat = this.producto[i]+", "+producConcat;
+        }
+        return producConcat = producConcat.substring(0, producConcat.length()-1);
     }
 }
