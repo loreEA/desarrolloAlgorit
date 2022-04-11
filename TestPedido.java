@@ -83,6 +83,7 @@ public class TestPedido {
             product[i] = auxiliar[i];
         }
     }
+    //Este módulo, dado un arreglo del tipo Real, cargará en cada posición el costo del producto
     public static double[] cargarCostos(String[] producto) {
         double[] costo = new double[10];
         int i=0, longitud = producto.length, cantidad;
