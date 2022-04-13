@@ -44,8 +44,13 @@ public class Pedido {
     public String getTelefono(){
         return telefono;
     }
-    public boolean equals(String unCodigo){
-        return this.codigo == unCodigo;
+    public String toString(){
+        return "El pedido "+codigo+" será entregado a "+nombre
+        +", con dirección en "+direccion+", su telefono es "+telefono
+        +", los productos que compro fueron "+concatenarProductos()+" y el costo total fue : "+calcularCostoTotal();
+    }
+    public boolean equals(Pedido unPedido){
+        return this.codigo.equalsIgnoreCase(unPedido.codigo);
     }
     //Metodos Modificadores
     //Estos métodos modicarán, según el tipo de valor, a ciertos atributos. Excepto el código
@@ -61,7 +66,7 @@ public class Pedido {
     public void setNombre(String unNombre){
         nombre = unNombre;
     }
-    public void setTelefeno(String unTelefono){
+    public void setTelefono(String unTelefono){
         telefono = unTelefono;
     }
     //Propias del tipo
