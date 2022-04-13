@@ -44,8 +44,8 @@ public class Avion {
         return "El avion "+identificador+" tiene un modelo "+modelo+", cantidad de asientos "
         +cantAsientos+", km recorridos "+kmRecorrid+" y una promedio de velocidad "+velocidProm;
     }
-    public boolean equals(String unIdentif){
-        return identificador.equalsIgnoreCase(unIdentif);
+    public boolean equals(Avion unAvion){
+        return this.identificador.equalsIgnoreCase(unAvion.identificador);
     }
     //Métodos modificadores
     //Estos métodos modicarán, según el tipo de valor, a ciertos atributos. Excep. al identif y modelo
@@ -60,8 +60,8 @@ public class Avion {
     }
     //Métodos propias del tipo
     //Este método compará los promedios de las velocidades de dos aviones y devolverá un valor logico
-    public boolean esMayorEnVeloc(double unaVelocProm){
-        return this.velocidProm <= unaVelocProm;
+    public boolean esMayorEnVeloc(Avion unAvion){
+        return this.velocidProm <= unAvion.velocidProm;
     }
 
 }
