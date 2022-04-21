@@ -48,7 +48,14 @@ public class Terreno {
         altura = al;
     }
     //Propias del tipo
-    public double perimetro (){}
-    public double superficie () {}
-    public double valor(double precio){} //ingresa el precio por metro cuadrado
+    public double perimetro(){
+        return (2*this.base)+(2*this.altura);
+    }
+    public double superficie(){
+        return this.base*this.altura;
+    }
+    //ingresa el precio por metro cuadrado
+    public double valor(double precio){
+        return precio*superficie();
+    } 
 }
