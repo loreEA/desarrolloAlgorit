@@ -19,32 +19,32 @@ public class Terreno {
         manzana = man;
     }
     //Metodos observadores
-    public int getCodigo () {
+    public int getCodigo() {
         return codigo;
     }
-    public double getBase (){
+    public double getBase(){
         return base;
     }
-    public double getAltura (){
+    public double getAltura(){
         return altura;
     }
-    public int getManzana () {
+    public int getManzana() {
         return manzana;
     }
-    public String toString () {
+    public String toStrin() {
         return "Datos del Terreno: "+codigo+","+base+","+altura+","+manzana;
     }
-    public boolean equals (Terreno ter) {
+    public boolean equals(Terreno ter) {
         return this.codigo == ter.codigo;
     }
     //Metodos Modificadores
-    public void setCodigo (int cod){
+    public void setCodigo(int cod){
         codigo = cod;
     }
-    public void setBase (double ba){
+    public void setBase(double ba){
         base = ba;
     }
-    public void setAltura (double al){
+    public void setAltura(double al){
         altura = al;
     }
     //Propias del tipo

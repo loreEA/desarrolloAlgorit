@@ -31,7 +31,7 @@ public class Mascota {
         return edad;
     }
     public String toString () {
-        return "";
+        return "Datos de la mascota: "+codigo+", "+nombre+", "+peso+", "+edad;
     }
     //Metodos Modificadores
     public void setCodigo (int cod){
