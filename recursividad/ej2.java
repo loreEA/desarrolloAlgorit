@@ -1,9 +1,9 @@
-﻿import java.util.Scanner;
-public class ejer1 {
+import java.util.Scanner;
+public class ej2 {
     public static void main(String[] args) {
         int n, sumatoria;
         n = cargarNum();
-        sumatoria = fun(n);
+        sumatoria = algo(n);
         System.out.println(sumatoria);
 
     }
@@ -21,11 +21,13 @@ public class ejer1 {
         sc.close();
         return num;
     }
-    public static int fun(int n){
+    public static int algo(int n){
         int aux=0;
-        for(int i=n; i>=0; i--)
-        {
-            aux = aux + i;
+        if(n == 1){
+            aux = 1;
+        }
+        else{
+            aux = algo(n-1)+1;
         }
         return aux;
     }
