@@ -10,6 +10,7 @@ public class ej4 {
         sonIguales= sonIguals(numero/10, numero%10);/*Aquí enseguida extraemos el último dígito para directamente comparar en el método */
         System.out.println("VERIFICADOR");
         System.out.println("¿Los dígitos del número son iguales? "+sonIguales);
+        sc.close();
     }
     public static boolean sonIguals(int n, int m){
         boolean aux;
