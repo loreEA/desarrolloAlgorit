@@ -12,11 +12,9 @@ public class ej2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Por favor ingrese un número entero.");
         num = sc.nextInt();
-        if(num<1){
-            do{
-                System.out.println("Error. Ingrese un valor valido.");
-                num = sc.nextInt();
-            }while(num<1);
+        while(num<1){
+            System.out.println("Error. Ingrese un valor valido.");
+            num = sc.nextInt();
         }
         sc.close();
         return num;
