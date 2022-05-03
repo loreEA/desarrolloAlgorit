@@ -58,7 +58,6 @@ public class TestAvion1 {
             promedVeloc = entrada.nextDouble();
             entrada.nextLine();
             avion[i] = new Avion(identif,modelo,cantAsientos,kmRecorrid,promedVeloc);
-            entrada.close();
         }
     }
     /*Este método, dado un array del tipo Avion, mostrará cierta información según la operación que 
@@ -114,7 +113,6 @@ public class TestAvion1 {
                     break;
             }
         } while (opcion>0 && opcion<5);
-        scan.close();
         System.out.println("-----------------------------------------------------------------------------------------------");
         System.out.println("                                         FIN PROGRAMA");
         System.out.println("-----------------------------------------------------------------------------------------------");

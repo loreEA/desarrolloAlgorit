@@ -46,8 +46,6 @@ public class TestPedido {
             }}
         while(producto.length<0);
         Pedido pedido = new Pedido(codigo,producto,costoProduc,direccion,nombre,telefono);
-        sc.close();
-        entrada.close();
         return pedido;
     }
     /*Este módulo, dado un arreglo del tipo Texto, cargará en cada una de las posiciones algún producto*/
@@ -107,7 +105,6 @@ public class TestPedido {
                 System.out.println("Error. Vuelva a cargar los datos.");
             }
         }while(i<longitud);
-        entrada.close();
         return costo;
     }
 }

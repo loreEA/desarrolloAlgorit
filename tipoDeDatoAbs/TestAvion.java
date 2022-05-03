@@ -34,7 +34,6 @@ public class TestAvion {
         System.out.println("Por favor ingrese el promedio de velocidad del avion "+avion.getIdentificador());
         promedVeloc = sc.nextDouble();
         avion = new Avion(id,modelo,cantidAsient,kmRecorrid,promedVeloc);
-        sc.close();
         return avion;
     }
     /*Este método, dado dos objetos del tipo Avion, mostrará o modificara según la operación que 
@@ -62,7 +61,6 @@ public class TestAvion {
                 case 4: modificarAvion(segundAvion);break;
             }
         } while (opcion>0 && opcion<5);
-        scan.close();
     }
     //Este módulo mostrará la información del avion que quiera ver el usuario
     public static void mostrarAvion(Avion unAvion) {
@@ -86,6 +84,5 @@ public class TestAvion {
         unAvion.setCantAsientos(cantAsients);
         unAvion.setKilomRecorrid(kilomRecorridos);
         unAvion.setVelocidadProm(promedioVeloc);
-        scann.close();
     }
 }
