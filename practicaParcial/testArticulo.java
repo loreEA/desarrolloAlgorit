@@ -20,7 +20,6 @@ public class testArticulo {
     public static void cargarArreglo(Articulo[] articulos){
         Scanner sc = new Scanner(System.in);
         Scanner scan = new Scanner(System.in);
-        Articulo otroArticulo;
         int i=0, longitud = articulos.length, codigoArt;
         double precioCost, precioVent;
         String nombreArt, categoria = "ABCabc";
@@ -29,8 +28,7 @@ public class testArticulo {
         do {
             System.out.println("Porfavor cargué el código del artículo "+(i+1));
             codigoArt = sc.nextInt();
-            otroArticulo = new Articulo(codigoArt);
-            if(seEncontroCodigo(articulos, otroArticulo,i)){
+            if(seEncontroCodigo(articulos, codigoArt,i)){
                 System.out.println("Error. Ya se ingreso ese código");
             }
             else{
@@ -68,11 +66,11 @@ public class testArticulo {
             }
         } while (i<longitud);
     }
-    public static boolean seEncontroCodigo(Articulo articulos[], Articulo otroArticulo, int artCargados){
+    public static boolean seEncontroCodigo(Articulo articulos[], int codigo, int artCargados){
         boolean seEncontro=false;
         int i =  0;
         while (!seEncontro && i<artCargados) {
-            if(articulos[i].equals(otroArticulo)){
+            if(articulos[i].getCodigo()==codigo){
                 seEncontro = true;
             }
             else{
