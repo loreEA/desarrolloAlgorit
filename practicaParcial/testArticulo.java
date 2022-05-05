@@ -22,7 +22,7 @@ public class testArticulo {
         Scanner scan = new Scanner(System.in);
         int i=0, longitud = articulos.length, codigoArt;
         double precioCost, precioVent;
-        String nombreArt, categoria = "ABCabc";
+        String nombreArt, categoria = "ABC";
         char categoriaArt;
         boolean inventariadoArt;
         do {
@@ -44,19 +44,23 @@ public class testArticulo {
                     System.out.println("Porfavor cargar el precio de costo del artículo "+(i+1));
                     precioCost = sc.nextDouble();
                     if(precioCost<1){
-                        System.out.println("Error. Vuelva a ingresar el precio del costo.");
+                        System.out.println("Error. El valor ingresado es menor o igual a 0");
                     }
                 } while (precioCost<1);
                 do {
                     System.out.println("Porfavor cargar el precio de venta del artículo "+(i+1));
                     precioVent= sc.nextDouble();
+                    if(precioVent<1){
+                        System.out.println("Error. El valor ingresado es menor o igual a 0");
+                    }
                 } while(precioVent<1);
                 do {
                     System.out.println("Porfavor cargar un caracter que represente la categoría del artículo "+(i+1));
                     System.out.println("Los tipos de categoría y sus caracteres para representarlos: 'A', 'B' o 'C'");
-                    categoriaArt = scan.next().charAt(0);
+                    categoriaArt = sc.next().charAt(0);
+                    categoriaArt = Character.toUpperCase(categoriaArt);
                     if(categoria.indexOf(categoriaArt)<0){
-                        System.out.println("Error. No existe la posibilidad con el caracter que encontro");
+                        System.out.println("Error. Ingreso un carácter distinto a las posibilidades dadas");
                     }
                 } while (categoria.indexOf(categoriaArt)<0);
                 System.out.println("Porfavor cargar si esta inventariado con true(verdadero) o false(falso)");
