@@ -55,7 +55,7 @@ public class Automovil {
         return seguroConFranq;
     }
     public String toString(){
-        return "";
+        return "Datos de "+dni+": "+patente+", "+marca+", "+modelo+", "+cantAccident+", "+tipoSeguro+", "+montoAsegurado+", "+seguroConFranq;
     }
     //Métodos Modificadores
     public void setMarca(String unaMarca){

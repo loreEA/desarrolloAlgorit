@@ -1,0 +1,32 @@
+1. TDA.Se desea mantener información de competidores de salto en alto. Sobre cada
+competidor se conoce dni, nombre, apellido, edad, ciudad de origen, peso y altura (en
+cm)) y la longitud máx llegada por ese competidor. Para determinar los tiempos y
+designar al ganador.
+Especificar el diagrama UML para la clase Competidor, explicitar categorías de los métodos.
+Implementar la clase en un archivo java, los métodos:
+1. equals(... ) -dos competidores
+2. toString()
+3. Dos métodos constructores
+4. Dos métodos visualizadores
+5. Dos métodos modificadores
+6. Definir un método que dados dos valores (centímetros y peso) calcule el Índice de
+Masa corporal IMC = (peso / estatura (2 al cuadrado)) en kg y metros
+Puede ser un método estático? si/no por qué?
+2. Realice un pseudocódigo y código que, dado un arreglo de competidores.
+a. Realice un método que recorra el arreglo de competidores retorne otro arreglos con los
+competidores que tienen un IMC de bajo peso (< 18.5)
+(grupo 1)
+b. Realice un método que dado un IMC específico retorne si existe al menos un competidor con
+dicho IMC en el arreglo.
+(grupo 2)
+3. Dada un texto,
+a. determine la cantidad de las palabras con más de 3 vocales diferentes.
+Realice una traza para: “ Modularizar no es problematico.”, (debe retornar 2)
+b. Determine todos las palabras que tienen al menos una letra igual pegada.
+Realice una traza para el siguiente texto: “corriendo bajo la lluvia “, (debe retornar 2)
+4- Dada una matriz de mediciones mensuales de lluvias por 4 años determinar expresada en ml:
+(matriz de 4x12)
+a. Generar un arreglo de promedios anuales de lluvias.
+b. Identificar si existe algún mes de algún año cuya medición sea 0.
+c. Sumar las mediciones de Marzo de los últimos 3 años
+d. Generar una arreglo con la suma de las lluvias de los meses impares.
