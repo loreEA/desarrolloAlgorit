@@ -1,4 +1,4 @@
-import java.util.*;
+﻿import java.util.*;
 public class ejer4{
     public static void main(String[] args) {
         String oracion = cargarFrase();
@@ -19,7 +19,6 @@ public class ejer4{
         return frase;
     }
     public static int contPalabrConH(String frase) {
-        frase = frase.trim();
         String fraseCopiad = frase + " ", palabra;
         int i = 0, pos, contPalabConH = 0, existeH, cont;
         while(i<frase.length()){
