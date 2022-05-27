@@ -14,7 +14,7 @@ public class ej4 {
     }
     public static boolean sonIguals(int n, int m){
         boolean aux;
-        if(n<10 && n==m){ /*Esto verifica que estemos parados en el primer dígito y lo comparamos para ver si es igual al último dígito extraído */
+        if(n<10 && n==m){ /*Esto verifica que estamos parados en el primer dígito y lo comparamos para ver si es igual al último dígito extraído */
             aux = true;
         }
         else{
