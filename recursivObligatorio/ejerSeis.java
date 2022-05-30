@@ -1,19 +1,18 @@
 import java.util.*;
 public class ejerSeis {
+    /*Este algoritmo, según un caracter y un número entero ingresado, 
+    mostrará una pirámide de caracteres*/
     public static void main(String[] args){
-        char caracAImprim = caracterAImprim();
+        char caracAImprim;
+        Scanner scann = new Scanner(System.in);
+        System.out.println("                            CARGAR CARACTER");
+        System.out.println("Porfavor cargué un caracter.");
+        caracAImprim = scann.next().charAt(0);  
         int numCarg = cargarNum(), fil = 0, col = 0;
         System.out.println("                            MOSTRAR PIRAMIDE");
         mostrarPiramide(caracAImprim, numCarg, fil, col);
     }
-    public static char caracterAImprim(){
-        char caracter;
-        Scanner scann = new Scanner(System.in);
-        System.out.println("                            CARGAR CARACTER");
-        System.out.println("Porfavor cargué un caracter.");
-        caracter = scann.next().charAt(0);    
-        return caracter;
-    }
+    //Este módulo cargará y retornará un número entero estrictamente mayor a 1
     public static int cargarNum() {
         int numero;
         Scanner sc = new Scanner(System.in);
@@ -27,6 +26,8 @@ public class ejerSeis {
         } while (numero<2);
         return numero;
     }
+    /*Este módulo mostrará una pirámide con un caracter especificamente ingresado
+    y se mostrará de acuerdo a las cantidad de veces que el usuario haya, también, ingresado.*/
     public static void mostrarPiramide(char caracter, int num, int fila, int columna){
         if (columna<0) {
             fila = fila+1;
