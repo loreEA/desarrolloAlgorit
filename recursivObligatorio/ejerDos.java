@@ -1,4 +1,4 @@
-import java.util.*;;
+﻿import java.util.*;;
 public class ejerDos {
     /*Este algoritmo cargará y verificara si la matriz dada es de identidad */
     public static void main(String[] args) {
@@ -46,9 +46,9 @@ public class ejerDos {
         }
         if (fil<matriz.length) {
             if (fil == col && matriz[fil][col] == 1) {
-                identidad = esDeIdentidad(matriz, fil, col = col+1);
+                identidad = esDeIdentidad(matriz, fil, col+1);
             } else if(fil !=col && matriz[fil][col] == 0){
-                identidad = esDeIdentidad(matriz, fil, col = col+1);
+                identidad = esDeIdentidad(matriz, fil, col+1);
             }
             else{
                 identidad = false;

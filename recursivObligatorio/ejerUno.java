@@ -3,7 +3,7 @@ public class ejerUno {
     /*Este algoritmo desea verificar que si un número ingresado tiene dos números consecutivos */
     public static void main(String[] args) {
         int numero = cargarNumero();
-        boolean existeNumConsecutiv = existenDosNumConsecutiv(numero/10, numero%10);
+        boolean existeNumConsecutiv = existeNumConsecutiv(numero, numero%10);
         if (existeNumConsecutiv) {
             System.out.println("Se encontraron dos números que eran consecutivos");
         } else {
@@ -26,15 +26,15 @@ public class ejerUno {
     }
     /*Este método comprobará si el resto de un número es igual al último dígito extraído 
     del mismo número*/
-    public static boolean existenDosNumConsecutiv(int num, int mod) {
-        boolean existe, esCeroNueve= (num !=9 || mod !=0), verificar = (num%10 !=9);
-        if (num<10 && num+1!=mod && esCeroNueve && verificar) {
+    public static boolean existeNumConsecutiv(int numero, int resto){
+        boolean existe;
+        if (numero<10 && ((numero!=9 && resto!=0) && (numero+1!=resto))) {
             existe = false;
-        } else {
-            if ((num%10)+1 != mod && esCeroNueve && verificar) {
-                mod = num%10;
-                existe = existenDosNumConsecutiv(num/10, mod);
-            } else {
+        } else{
+            if (((numero/10)%10+1)!= resto && (((numero/10)%10!=9 && resto!=0))) {
+                existe = existeNumConsecutiv(numero/10, numero%10);
+            }
+            else{
                 existe = true;
             }
         }
