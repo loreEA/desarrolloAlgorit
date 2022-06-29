@@ -2,10 +2,10 @@ public class Ciudad {
     //Atributos
     private String nombre;
     private int poblacion;
-    private double latitud;
-    private double longitud;
+    private float latitud;
+    private float longitud;
     //Constructor
-    public Ciudad(String unNomb,int cantCiudadan,int unaLatitud,int unaLong){
+    public Ciudad(String unNomb,int cantCiudadan,float unaLatitud,float unaLong){
         nombre = unNomb;
         poblacion = cantCiudadan;
         latitud = unaLatitud;
@@ -19,10 +19,10 @@ public class Ciudad {
     public int getPoblacion(){
         return poblacion;
     }
-    public double getLatitud(){
+    public float getLatitud(){
         return latitud;
     }
-    public double getLongitud(){
+    public float getLongitud(){
         return longitud;
     }
     public String toString(){
@@ -31,23 +31,22 @@ public class Ciudad {
     //Métodos Modificadores
     /*Cada método modificador modificará los valores almacenados por un nuevo dato, del mismo 
     tipo, sin retornar nada.*/
-    //A consultar setNombre, setLatitud y setLongitud
     public void setNombre(String unNombre){
         nombre = unNombre;
     }
     public void setPoblacion(int cantCiudadan){
         poblacion = cantCiudadan;
     }
-    public void setLatitud(double unaLatitud) {
+    public void setLatitud(float unaLatitud) {
         latitud = unaLatitud;
     }
-    public void setLongitud(double unaLongitud){
+    public void setLongitud(float unaLongitud){
         longitud = unaLongitud;
     }
     //Propios del tipo
     //Este método verificará si dos objetos, del mismo tipo, tienen los mismos datos
     public boolean equals(Ciudad otraCiudad){
-       return (this.latitud == otraCiudad.latitud) && (this.longitud == otraCiudad.longitud);
+       return this.nombre == otraCiudad.nombre;
     }
     /*Este método verificará y retornará: 
       - menor a 0 cuando cadena que llama al método es primero lexicográficamente.
@@ -57,7 +56,5 @@ public class Ciudad {
     public int compareTo(Ciudad otraCiudad){
         return this.nombre.compareTo(otraCiudad.nombre);
     }
-    public int compareTo(String nombreCiud){
-        return this.nombre.compareTo(nombreCiud);
-    }
+    
 }
