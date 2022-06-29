@@ -1,0 +1,1 @@
+Liste aquellas ciudades que tienen dos letras iguales en ellas.
