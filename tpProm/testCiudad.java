@@ -8,19 +8,19 @@ public class testCiudad{
         
     }
     private static String abreviaturaCiudad(String ciudad,int i) {
-        String abrevitur;
+        String abreviatura;
         boolean esVoc;
         if (i<ciudad.length()) {
             esVoc = esVocal(ciudad.charAt(i));
             if (ciudad.charAt(i) == ' ' || esVoc) {
-                abrevitur = abreviaturaCiudad(ciudad, i+1);
+                abreviatura = abreviaturaCiudad(ciudad, i+1);
             } else {
-                abrevitur = ciudad.charAt(i)+ abreviaturaCiudad(ciudad, i+1);
+                abreviatura = ciudad.charAt(i)+ abreviaturaCiudad(ciudad, i+1);
             }
         } else {
-            abrevitur = "";
+            abreviatura = "";
         } 
-        return abrevitur;
+        return abreviatura;
     }
     public static boolean esVocal(char letra) {
         String vocales = "aeiouAEIOU";
