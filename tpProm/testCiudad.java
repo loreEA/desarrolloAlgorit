@@ -59,4 +59,17 @@ public class testCiudad{
         ciudades[i].setNombre(ciudades[j].getNombre());
         ciudades[j].setNombre(nombre);
     }
+    public static boolean letrasConsec(String nombre,int i) {
+        boolean existe;
+        if (i<nombre.length()-1) {
+            if (nombre.charAt(i)!=nombre.charAt(i+1)) {
+                existe = letrasConsec(nombre, i+1);
+            } else {
+                existe = true;
+            }
+        } else {
+            existe = false;
+        }
+        return existe;
+    }
 }
